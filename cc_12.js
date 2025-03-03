@@ -19,3 +19,17 @@ Array.from(metricCards).forEach(card => {
 });
 //Test Cases:
 //Each metric card should show the updated text or style change after the JavaScript runs.
+
+// Task 3: Dynamic Inventory Management – Adding and Removing Items
+const inventoryList = document.getElementById("inventoryList");
+
+function addProductItem(productName) {
+    const li = document.createElement("li");
+    li.setAttribute("class", "product-item");
+    li.textContent = productName;
+    li.addEventListener("click", () => inventoryList.removeChild(li));
+    inventoryList.appendChild(li);
+}
+//Test Cases:
+//Clicking a button that calls your “add” function should add a new product item to the inventory list.
+//Clicking on a product item should remove it from the list.
